@@ -23,7 +23,7 @@ El modelo utilizado es el ResUnet, mas informacion sobre este es encuentra en es
 
 <p align="center">
   <img src="Bootcamp_img/resunet.png" width=200 height=200>
-  <img src="Bootcamp_img/resnet_block.png" width=100 height=200>
+  <img src="Bootcamp_img/resnet_block.png" width=80 height=200>
 </p>
 
 # :leaves: Training :leaves:
