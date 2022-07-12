@@ -10,6 +10,7 @@ El siguiente proyecto consiste en la implementacion de un sistema de segmentacio
 # <p align="center"> :evergreen_tree: Descripción del proyecto :evergreen_tree: </p>
 # :ear_of_rice: Dataset :ear_of_rice:
 El dataset utilizado puede ser obtenido por este link, detallando este cuenta con un total de 322 datos, cada dato contiene una imagen satelital RGB y otra imagen que contiene la imagen segmentada. Respecto a las clases en total se tiene 3, el primero denotado por el color rojo [185,0,0] representa el area deforestada, el segundo denotado por el color verde [0,83,0] representa las areas verder y por ultimo el color azul [0,0,45] representa objetos variados o sin atiqueta (lagos, casas, etc.).
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 Un problema que se noto al obtener datos es la variabilidad entre el espacio de color por lo cual se realizo un preprocesado de datos, este ....
 Otra problema fue la cantidad de datos que  se tiene al ser muy limitada se realiso data aumentation ..... 
 # :potted_plant: Modelo :potted_plant:
