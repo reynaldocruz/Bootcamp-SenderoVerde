@@ -21,7 +21,7 @@ Binary Crossentropy:
 Categorical Crossentropu:
 Diff loss:
 # :herb: Evaluación :herb:
-Como anteriormente se mensionaba se analizo el modelo con la metrica de evaluacion de IoU
+Como anteriormente se mensionaba se analizo el modelo con la metrica de evaluacion de IoU obteniendose un 80% de presicion.
 # :maple_leaf: Implementacion :maple_leaf:
 Se realizo una interface para que el usuario pueda 
 # :cactus:Tecnologías/Frameworks utilizados :cactus:
