@@ -9,9 +9,14 @@ El siguiente proyecto consiste en la implementacion de un sistema de segmentacio
 - Y tambien puede realizar un analisis temporal para poder predecir el deforestamiento temporal futuro.
 # <p align="center"> :evergreen_tree: Descripción del proyecto :evergreen_tree: </p>
 # :ear_of_rice: Dataset :ear_of_rice:
-El dataset utilizado puede ser obtenido por este link, detallando este cuenta con un total de 322 datos, cada dato contiene una imagen satelital RGB y otra imagen que contiene la imagen segmentada. Respecto a las clases en total se tiene 3, el primero denotado por el color rojo [185,0,0] representa el area deforestada, el segundo denotado por el color verde [0,83,0] representa las areas verder y por ultimo el color azul [0,0,45] representa objetos variados o sin atiqueta (lagos, casas, etc.).
-![alt text](https://github.com/reynaldocruz/Bootcamp-SenderoVerde/Bootcamp_img/rgb_dataset.png?raw=true)
-Un problema que se noto al obtener datos es la variabilidad entre el espacio de color por lo cual se realizo un preprocesado de datos, este ....
+El dataset utilizado puede ser obtenido por este [enlace](https://arxiv.org/pdf/1711.10684.pdf), detallando este cuenta con un total de 322 datos, cada dato contiene una imagen satelital RGB y otra imagen que contiene la imagen segmentada. Respecto a las clases en total se tiene 3, el primero denotado por el color rojo [185,0,0] representa el area deforestada, el segundo denotado por el color verde [0,83,0] representa las areas verder y por ultimo el color azul [0,0,45] representa objetos variados o sin atiqueta (lagos, casas, etc.).
+
+<p align="center">
+  <img src="Bootcamp_img/rgb_dataset.png" width=200 height=200>
+  <img src="Bootcamp_img/mask_dataset.png" width=200 height=200>
+</p>
+
+Un problema que se noto al utilizar estos datos es la variabilidad entre el espacio de color por lo cual se realizo un preprocesado de datos, este ....
 Otra problema fue la cantidad de datos que  se tiene al ser muy limitada se realiso data aumentation ..... 
 # :potted_plant: Modelo :potted_plant:
 El modelo utilizado es el ResUnet, mas informacion sobre este es encuentra en este link. Resumiendo, este modelo es mayormente utilizado para ...., su arquitectura esta dividida en 3 partes. La primera realiza ..., la segunda descomprime y la tercera ..., el la siguiente figura se puede apreciar graficamente los bloques y la arquitectura.
