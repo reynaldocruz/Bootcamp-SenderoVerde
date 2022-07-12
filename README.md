@@ -19,7 +19,13 @@ El dataset utilizado puede ser obtenido por este [enlace](https://arxiv.org/pdf/
 Un problema que se noto al utilizar estos datos es la variabilidad entre el espacio de color por lo cual se realizo un preprocesado de datos, este ....
 Otra problema fue la cantidad de datos que  se tiene al ser muy limitada se realiso data aumentation ..... 
 # :potted_plant: Modelo :potted_plant:
-El modelo utilizado es el ResUnet, mas informacion sobre este es encuentra en este [enlace](https://arxiv.org/pdf/1711.10684.pdf). Resumiendo, este modelo es mayormente utilizado para ...., su arquitectura esta dividida en 3 partes. La primera realiza ..., la segunda descomprime y la tercera ..., el la siguiente figura se puede apreciar graficamente los bloques y la arquitectura.
+El modelo utilizado es el ResUnet, mas informacion sobre este es encuentra en este [enlace](https://arxiv.org/pdf/1711.10684.pdf). Resumiendo, este modelo es mayormente utilizado para ...., su arquitectura esta dividida en 3 partes. La primera realiza ..., la segunda descomprime y la tercera ..., el la siguiente figura se puede apreciar graficamente los bloques y la arquitectura en general.
+
+<p align="center">
+  <img src="Bootcamp_img/resunet.png" width=200 height=200>
+  <img src="Bootcamp_img/resnet_block.png" width=100 height=200>
+</p>
+
 # :leaves: Training :leaves:
 Para el entrenamiento se entrenaron varios modelos, donde los que mejor generalizaban tienen los siguientes hiperparametros ....., las graficas pueden verse a continuacion. Se experimento con 3 funciones de perdida que generalmente se utilizan para este tipo de tareas. 
 Iou Loss:
