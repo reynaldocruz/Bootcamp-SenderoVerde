@@ -40,7 +40,9 @@ Para el entrenamiento se entrenaron varios modelos, donde se priorizaron dos, un
 * Optimizador = Adam
 * Funcion de perdida = Binary Crossentropy
 
-Las graficas del entrenamiento pueden verse a continuacion. 
+Las graficas del entrenamiento pueden verse a continuacion.
+
+<p align="center"> Modelo Binario </p>
 
 <p align="center">
   <img src="Bootcamp_img/acurracy.jpg" width=300 height=250>
@@ -56,7 +58,9 @@ Para el segundo se utilizaron los siguientes hiperparametros:
 * Optimizador = Adam
 * Funcion de perdida = Categorical Crossentropy
 
-Las graficas del entrenamiento pueden verse a continuacion. 
+Las graficas del entrenamiento pueden verse a continuacion.
+
+<p align="center"> Modelo Multiclase </p>
 
 <p align="center">
   <img src="Bootcamp_img/acurracy_rgb.jpg" width=300 height=250>
