@@ -96,7 +96,8 @@ Se realizo una interface para que el usuario pueda ...
 
 # :potted_plant: Instalación :potted_plant:
 Para el entrenamiento, evaluación y la obtención del modelo en formato TFLite o HDF5 simplemente se puede ejecutar cualquiera de los dos ([Notebooks](https://github.com/reynaldocruz/Bootcamp-SenderoVerde/tree/main/Notebooks)) o puedes descargarlos conjuntamente con el dataset y después cambiar las direcciones de los archivos en el notebook manualmente y ejecutarlo localmente.
-Para el prototipo funcional .....
+Para el prototipo funcional se requiere instalar los requirements y hacer correr el programa principal.
+* pip install requirements.txt
 
 # :four_leaf_clover: Creditos :four_leaf_clover:
 :fallen_leaf: Reynaldo Esteban Cruz Villagomez :fallen_leaf: reynaldocruz102@gmail.com
@@ -105,4 +106,4 @@ Para el prototipo funcional .....
 
 :cactus: Jorge Armando Quiroz Pérez :cactus: jorge.armando.quiroz.perez@gmail.com
 
-:potted_plant: Grisel Quispe :potted_plant: grisel_eliana@hotmail.com 
+:potted_plant: Grisel Quispe :potted_plant: griseleliana79@gmail.com
