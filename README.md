@@ -32,7 +32,7 @@ El modelo utilizado es el ResUnet, mas informacion sobre este es encuentra en es
 </p>
 
 # :leaves: Training :leaves:
-Para el entrenamiento se entrenaron varios modelos, donde se priorizaron dos, uno entrenando solamente 2 clases (Binario) y el otro entrenando 3 clases (Multiclase), comensando por el primero se utilizaron los siguientes hiperparametros:
+Para el entrenamiento se entrenaron varios modelos ([Notebooks](https://github.com/reynaldocruz/Bootcamp-SenderoVerde/tree/main/Notebooks)), donde se priorizaron dos, uno entrenando solamente 2 clases (Binario) y el otro entrenando 3 clases (Multiclase), comensando por el primero se utilizaron los siguientes hiperparametros:
 * Learning Rate = 1e-3
 * Batch size = 16
 * Verbose = 1
@@ -69,7 +69,7 @@ Las graficas del entrenamiento pueden verse a continuacion.
 </p>
 
 # :herb: Evaluación :herb:
-Como anteriormente se mensionaba se analizo el modelo con la metrica de evaluacion de meanIoU obteniendose un 85.23% de presicion con el modelo binario (numero de clases igual a 2) y 88.09% con el multiclase(numero de clases igual a 3).
+Como anteriormente se mensionaba se analizo el modelo con la metrica de evaluacion de *meanIoU* obteniendose un 85.23% de presicion con el modelo binario (numero de clases igual a 2) y 88.09% con el multiclase(numero de clases igual a 3).
 
 <p align="center">
   :herb: Modelo Binario :herb:
@@ -86,14 +86,21 @@ Como anteriormente se mensionaba se analizo el modelo con la metrica de evaluaci
 </p>
 
 # :maple_leaf: Implementacion :maple_leaf:
-Se realizo una interface para que el usuario pueda 
+Se realizo una interface para que el usuario pueda ...
+
 # :cactus:Tecnologías/Frameworks utilizados :cactus:
 * TensorFlow
 * OpenCV
 * Python 3
 * Google Colab
 * Gui ....
+
 # :potted_plant: Instalación :potted_plant:
-Para el Entrenamiento, evaluacion y obtencion del modelo en formato TFLite o HDF5 simplemente se puede ejecutar el calquiera de los dos Notebooks o puedes descargarlos conjuntamente con el dataset y despues cambiar las direcciones de los archivos en el Notebook manualmente.
+Para el entrenamiento, evaluacion y la obtencion del modelo en formato TFLite o HDF5 simplemente se puede ejecutar calquiera de los dos ([Notebooks](https://github.com/reynaldocruz/Bootcamp-SenderoVerde/tree/main/Notebooks)) o puedes descargarlos conjuntamente con el dataset y despues cambiar las direcciones de los archivos en el notebook manualmente y ejecutarlo localmente.
+Para el prototipo funcional .....
+
 # :four_leaf_clover: Creditos :four_leaf_clover:
 :fallen_leaf: Reynaldo Esteban Cruz Villagomez :fallen_leaf: reynaldocruz102@gmail.com
+:leaves: Mario Torrez :leaves: mario@gmail.com
+:cactus: Jorge  :cactus: mario@gmail.com
+:potted_plant: Grisel Quispe :potted_plant: mario@gmail.com
