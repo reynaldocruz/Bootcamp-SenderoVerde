@@ -84,5 +84,9 @@ Como anteriormente se mensionaba se analizo el modelo con la metrica de evaluaci
 # :maple_leaf: Implementacion :maple_leaf:
 Se realizo una interface para que el usuario pueda 
 # :cactus:Tecnologías/Frameworks utilizados :cactus:
+* TensorFlow
+* OpenCV
+* Python 3
+* Google Colab
 # :potted_plant: Instalación :potted_plant:
 # :four_leaf_clover: Creditos :four_leaf_clover:
