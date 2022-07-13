@@ -32,11 +32,15 @@ El modelo utilizado es el ResUnet, mas informacion sobre este es encuentra en es
 </p>
 
 # :leaves: Training :leaves:
-Para el entrenamiento se entrenaron varios modelos, donde los que mejor generalizaban tienen los siguientes hiperparametros ....., las graficas pueden verse a continuacion. Se experimento con 3 funciones de perdida que generalmente se utilizan para este tipo de tareas. 
-Iou Loss:
-Binary Crossentropy:
-Categorical Crossentropu:
-Diff loss:
+Para el entrenamiento se entrenaron varios modelos, donde se priorizaron dos, uno entrenando solamente 2 clases (Binario) y el otro entrenando 3 clases (Multiclase), comensando por el primero se utilizaron los siguientes hiperparametros:
+* Learning Rate = 1e-3
+* Batch size = 16
+* Verbose = 1
+* Epocas = 50
+* Optimizador = Adam
+* Funcion de perdida = Binary Crossentropy
+
+Las graficas del entrenamiento pueden verse a continuacion. 
 
 <p align="center">
   <img src="Bootcamp_img/acurracy.jpg" width=300 height=250>
@@ -44,21 +48,37 @@ Diff loss:
   <img src="Bootcamp_img/iou.jpg" width=300 height=250>
 </p>
 
+Para el segundo se utilizaron los siguientes hiperparametros:
+* Learning Rate = 1e-4
+* Batch size = 16
+* Verbose = 1
+* Epocas = 50
+* Optimizador = Adam
+* Funcion de perdida = Categorical Crossentropy
+
+Las graficas del entrenamiento pueden verse a continuacion. 
+
+<p align="center">
+  <img src="Bootcamp_img/acurracy_rgb.jpg" width=300 height=250>
+  <img src="Bootcamp_img/loss_rgb.jpg" width=300 height=250>
+  <img src="Bootcamp_img/iou_rgb.jpg" width=300 height=250>
+</p>
+
 # :herb: Evaluación :herb:
 Como anteriormente se mensionaba se analizo el modelo con la metrica de evaluacion de meanIoU obteniendose un 85.23% de presicion con el modelo binario (numero de clases igual a 2) y 88.09% con el multiclase(numero de clases igual a 3).
 
 <p align="center">
-  # :herb: Modelo Binario :herb:
+  :herb: Modelo Binario :herb:
   <img src="Bootcamp_img/descarga.png" width=350 height=100>
   <img src="Bootcamp_img/t2.png" width=350 height=100>
   <img src="Bootcamp_img/t3.png" width=350 height=100>
 </p>
 
 <p align="center">
-  # :herb: Modelo Multiclase :herb:
-  <img src="Bootcamp_img/rgb1.png" width=350 height=100>
-  <img src="Bootcamp_img/rgb2.png" width=350 height=100>
-  <img src="Bootcamp_img/rgb3.png" width=350 height=100>
+  :herb: Modelo Multiclase :herb:
+  <img src="Bootcamp_img/rgbt1.png" width=350 height=100>
+  <img src="Bootcamp_img/rgbt2.png" width=350 height=100>
+  <img src="Bootcamp_img/rgbt3.png" width=350 height=100>
 </p>
 
 # :maple_leaf: Implementacion :maple_leaf:
