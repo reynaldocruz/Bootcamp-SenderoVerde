@@ -101,6 +101,9 @@ Para el prototipo funcional .....
 
 # :four_leaf_clover: Creditos :four_leaf_clover:
 :fallen_leaf: Reynaldo Esteban Cruz Villagomez :fallen_leaf: reynaldocruz102@gmail.com
+
 :leaves: Mario Torrez :leaves: mario@gmail.com
+
 :cactus: Jorge  :cactus: mario@gmail.com
+
 :potted_plant: Grisel Quispe :potted_plant: mario@gmail.com
