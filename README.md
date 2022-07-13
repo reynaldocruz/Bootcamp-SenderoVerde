@@ -92,5 +92,8 @@ Se realizo una interface para que el usuario pueda
 * OpenCV
 * Python 3
 * Google Colab
+* Gui ....
 # :potted_plant: Instalación :potted_plant:
+Para el Entrenamiento, evaluacion y obtencion del modelo en formato TFLite o HDF5 simplemente se puede ejecutar el calquiera de los dos Notebooks o puedes descargarlos conjuntamente con el dataset y despues cambiar las direcciones de los archivos en el Notebook manualmente.
 # :four_leaf_clover: Creditos :four_leaf_clover:
+:fallen_leaf: Reynaldo Esteban Cruz Villagomez :fallen_leaf: reynaldocruz102@gmail.com
