@@ -12,18 +12,23 @@ El siguiente proyecto consiste en la implementacion de un sistema de segmentacio
 El dataset utilizado puede ser obtenido por este [enlace](https://arxiv.org/pdf/1711.10684.pdf), detallando este cuenta con un total de 322 datos, cada dato contiene una imagen satelital RGB y otra imagen que contiene la imagen segmentada. Respecto a las clases en total se tiene 3, el primero denotado por el color rojo [185,0,0] representa el area deforestada, el segundo denotado por el color verde [0,83,0] representa las areas verder y por ultimo el color azul [0,0,45] representa objetos variados o sin atiqueta (lagos, casas, etc.).
 
 <p align="center">
-  <img src="Bootcamp_img/rgb_dataset.png" width=200 height=200>
-  <img src="Bootcamp_img/mask_dataset.png" width=200 height=200>
+  <img src="Bootcamp_img/rgb_dataset.png" width=350 height=350>
+  <img src="Bootcamp_img/mask_dataset.png" width=350 height=350>
 </p>
 
-Un problema que se noto al utilizar estos datos es la variabilidad entre el espacio de color por lo cual se realizo un preprocesado de datos, este ....
-Otra problema fue la cantidad de datos que  se tiene al ser muy limitada se realiso data aumentation ..... 
-# :potted_plant: Modelo :potted_plant:
-El modelo utilizado es el ResUnet, mas informacion sobre este es encuentra en este [enlace](https://arxiv.org/pdf/1711.10684.pdf). Resumiendo, este modelo es mayormente utilizado para ...., su arquitectura esta dividida en 3 partes. La primera realiza ..., la segunda descomprime y la tercera ..., el la siguiente figura se puede apreciar graficamente los bloques y la arquitectura en general.
+Un problema que se noto al utilizar estos datos es la variabilidad entre el espacio de color por lo cual se realizo un preprocesado de datos, este consiste en ...
+Otra problema fue la cantidad de datos que se tiene al ser muy limitada se realiso data aumentation con dos tecnicas la primera es Flipping y la segunda Bright Variation.
 
 <p align="center">
-  <img src="Bootcamp_img/resunet.png" width=200 height=200>
-  <img src="Bootcamp_img/resnet_block.png" width=80 height=200>
+  <img src="Bootcamp_img/flipping.png" width=350 height=350>
+</p>
+
+# :potted_plant: Modelo :potted_plant:
+El modelo utilizado es el ResUnet, mas informacion sobre este es encuentra en este [enlace](https://arxiv.org/pdf/1711.10684.pdf). Resumiendo, este modelo es mayormente utilizado para ...., su arquitectura esta dividida en 3 partes. La primera realiza el proceso de encoder, la segunda descomprime y la tercera ..., el la siguiente figura se puede apreciar graficamente los bloques y la arquitectura en general.
+
+<p align="center">
+  <img src="Bootcamp_img/resunet.png" width=650 height=350>
+  <img src="Bootcamp_img/resnet_block.png" width=150 height=350>
 </p>
 
 # :leaves: Training :leaves:
@@ -32,8 +37,22 @@ Iou Loss:
 Binary Crossentropy:
 Categorical Crossentropu:
 Diff loss:
+
+<p align="center">
+  <img src="Bootcamp_img/acurracy.jpg" width=300 height=250>
+  <img src="Bootcamp_img/loss.jpg" width=300 height=250>
+  <img src="Bootcamp_img/iou.jpg" width=300 height=250>
+</p>
+
 # :herb: Evaluación :herb:
-Como anteriormente se mensionaba se analizo el modelo con la metrica de evaluacion de IoU obteniendose un 80% de presicion.
+Como anteriormente se mensionaba se analizo el modelo con la metrica de evaluacion de IoU obteniendose un 85.23% de presicion.
+
+<p align="center">
+  <img src="Bootcamp_img/acurracy.jpg" width=300 height=250>
+  <img src="Bootcamp_img/loss.jpg" width=300 height=250>
+  <img src="Bootcamp_img/iou.jpg" width=300 height=250>
+</p>
+
 # :maple_leaf: Implementacion :maple_leaf:
 Se realizo una interface para que el usuario pueda 
 # :cactus:Tecnologías/Frameworks utilizados :cactus:
