@@ -4,27 +4,27 @@
 En la última década una gran parte del bosque en el mundo sufrió una reducción de área considerable, debido al crecimiento de cultivos de alimentos, deforestación y al asentamiento de comunidades humanas. Estos hechos generaron que varios organismos internacionales tomen esta problemática como prioritaria, ya que las consecuencias generadas producían grandes catástrofes ambientales. El impacto que podría tener el proyecto se daría en un punto común que comparten ambos ODS 13 (Acción por el clima) y 15 (Vida de ecosistemas terrestres). Ya que la información que brindaría la plataforma, permitiría la protección y el monitoreo de la cobertura vegetal en áreas en riesgo de deforestación en territorio boliviano. Como si de un eslabón se tratase, la protección de esta cobertura vegetal permite la preservación de ecosistemas y biodiversidad del área de estudio. Esta preservación también permite evitar el deterioro de mecanismos naturales para la captura de dióxido de carbono. En el contexto boliviano esta problemática es recurrente, debido a que varias extensiones de bosque reducen su área de manera continua por chaqueos, desmontes, extensión de la frontera agrícola y actividades de deforestación ilegal. Para el desarrollo del proyecto se plantea usar imágenes satelitales de distintas fechas dentro las regiones verdes de gran importancia de la ciudad de La Paz y otros sectores dentro de Bolivia. El proyecto llega a tener varias métricas de evaluación, para los resultados en el proceso de entrenamiento se utilizará la evaluación de la exactitud, precisión, sensibilidad, especificidad y F1 score, para la evaluación general del sistema de segmentación se utilizará la métrica de evaluación de Intersection Over Union (IoU).
 # :rocket: Motivación :rocket:
 # :star: Funcionalidades mas importantes :star:
-El siguiente proyecto consiste en la implementacion de un sistema de segmentacion en imagenes satelitales, este cuenta con dos funcionalidades importantes.
-- El sistema es capas de reconocer el porcentaje de deforestamiento dentro una zona seleccionada.
-- Y tambien puede realizar un analisis temporal para poder predecir el deforestamiento temporal futuro.
+El siguiente proyecto consiste en la implementación de un sistema de segmentación en imágenes satelitales, este cuenta con dos funcionalidades importantes.
+- El sistema es capas de reconocer el porcentaje de deforestación dentro una zona seleccionada.
+- Y también puede realizar un análisis temporal para poder predecir la deforestación futuro.
 # <p align="center"> :evergreen_tree: Descripción del proyecto :evergreen_tree: </p>
 # :ear_of_rice: Dataset :ear_of_rice:
-El dataset utilizado puede ser obtenido por este [enlace](https://arxiv.org/pdf/1711.10684.pdf), detallando este cuenta con un total de 322 datos, cada dato contiene una imagen satelital RGB y otra imagen que contiene la imagen segmentada. Respecto a las clases en total se tiene 3, el primero denotado por el color rojo [185,0,0] representa el area deforestada, el segundo denotado por el color verde [0,83,0] representa las areas verder y por ultimo el color azul [0,0,45] representa objetos variados o sin atiqueta (lagos, casas, etc.).
+El dataset utilizado puede ser obtenido por este [enlace](https://arxiv.org/pdf/1711.10684.pdf), detallando este cuenta con un total de 322 datos, cada dato contiene una imagen satelital RGB y otra imagen que contiene la imagen segmentada. Respecto a las clases en total se tiene 3, el primero denotado por el color rojo [185,0,0] representa el área deforestada, el segundo denotado por el color verde [0,83,0] representa las áreas verdes y por último el color azul [0,0,45] representa objetos variados o sin etiqueta (lagos, casas, etc.).
 
 <p align="center">
   <img src="Bootcamp_img/rgb_dataset.png" width=350 height=350>
   <img src="Bootcamp_img/mask_dataset.png" width=350 height=350>
 </p>
 
-Un problema que se noto al utilizar estos datos es la variabilidad entre el espacio de color por lo cual se realizo un preprocesado de datos, este consiste en ...
-Otra problema fue la cantidad de datos que se tiene al ser muy limitada se realiso data aumentation con dos tecnicas la primera es Flipping y la segunda Bright Variation.
+Un problema que se notó al utilizar estos datos es la variabilidad entre el espacio de color por lo cual se realizó un pre procesado de datos, este consiste en ...
+Otro problema fue la cantidad de datos que se tiene al ser muy limitada se realizó data augmentation con dos técnicas la primera es Flipping y la segunda Bright Variation.
 
 <p align="center">
   <img src="Bootcamp_img/flipping.png" width=350 height=350>
 </p>
 
 # :potted_plant: Modelo :potted_plant:
-El modelo utilizado es el ResUnet, mas informacion sobre este es encuentra en este [enlace](https://arxiv.org/pdf/1711.10684.pdf). Resumiendo, este modelo es mayormente utilizado por su alto rendimiento con una cantidad baja o moderada de parametros, su arquitectura esta dividida en 3 partes. La primera es denominada encoder, este tiene como entrada la imagen la cual pasa por diferentes bloques de codificacion(encoders), lo cual ayuda a la red a aprender las representaciones abstractas. Despues viene el bridge que consiste en una preactivacion de los bloques residuales y por ultimo el decoder o decodificador toma al bridge y las skip connections de los diferentes bloques codificados y aprende la representacion semantica, en la siguiente figura se puede apreciar graficamente los bloques y la arquitectura en general.
+El modelo utilizado es el ResUnet, más información sobre este es encuentra en este [enlace](https://arxiv.org/pdf/1711.10684.pdf). Resumiendo, este modelo es mayormente utilizado por su alto rendimiento con una cantidad baja o moderada de parámetros, su arquitectura está dividida en 3 partes. La primera es denominada encoder, este tiene como entrada la imagen la cual pasa por diferentes bloques de codificación(encoders), lo cual ayuda a la red a aprender las representaciones abstractas. Después viene el bridge que consiste en una pre activación de los bloques residuales y por último el decoder o decodificador toma al bridge y las skip connections de los diferentes bloques codificados y aprende la representación semántica, en la siguiente figura se puede apreciar gráficamente los bloques y la arquitectura en general.
 
 <p align="center">
   <img src="Bootcamp_img/resunet.png" width=650 height=350>
@@ -32,7 +32,7 @@ El modelo utilizado es el ResUnet, mas informacion sobre este es encuentra en es
 </p>
 
 # :leaves: Training :leaves:
-Para el entrenamiento se entrenaron varios modelos ([Notebooks](https://github.com/reynaldocruz/Bootcamp-SenderoVerde/tree/main/Notebooks)), donde se priorizaron dos, uno entrenando solamente 2 clases (Binario) y el otro entrenando 3 clases (Multiclase), comensando por el primero se utilizaron los siguientes hiperparametros:
+Para el entrenamiento se entrenaron varios modelos ([Notebooks](https://github.com/reynaldocruz/Bootcamp-SenderoVerde/tree/main/Notebooks)), donde se priorizaron dos, uno entrenando solamente 2 clases (Binario) y el otro entrenando 3 clases (Multiclase), comenzando por el primero se utilizaron los siguientes hiperparámetros:
 * Learning Rate = 1e-3
 * Batch size = 16
 * Verbose = 1
@@ -40,7 +40,7 @@ Para el entrenamiento se entrenaron varios modelos ([Notebooks](https://github.c
 * Optimizador = Adam
 * Funcion de perdida = Binary Crossentropy
 
-Las graficas del entrenamiento pueden verse a continuacion.
+Las gráficas del entrenamiento pueden verse a continuación.
 
 <p align="center"> Modelo Binario </p>
 
@@ -50,7 +50,7 @@ Las graficas del entrenamiento pueden verse a continuacion.
   <img src="Bootcamp_img/iou.jpg" width=300 height=250>
 </p>
 
-Para el segundo se utilizaron los siguientes hiperparametros:
+Para el segundo se utilizaron los siguientes hiperparámetros:
 * Learning Rate = 1e-4
 * Batch size = 16
 * Verbose = 1
@@ -58,7 +58,7 @@ Para el segundo se utilizaron los siguientes hiperparametros:
 * Optimizador = Adam
 * Funcion de perdida = Categorical Crossentropy
 
-Las graficas del entrenamiento pueden verse a continuacion.
+Las gráficas del entrenamiento pueden verse a continuación.
 
 <p align="center"> Modelo Multiclase </p>
 
@@ -69,7 +69,7 @@ Las graficas del entrenamiento pueden verse a continuacion.
 </p>
 
 # :herb: Evaluación :herb:
-Como anteriormente se mensionaba se analizo el modelo con la metrica de evaluacion de *meanIoU* obteniendose un 85.23% de presicion con el modelo binario (numero de clases igual a 2) y 88.09% con el multiclase(numero de clases igual a 3).
+Como anteriormente es mencionado, se analizó el modelo con la métrica de evaluación de *meanIoU* obteniéndose un 85.23% de precisión con el modelo binario (número de clases iguales a 2) y 88.09% con el multiclase(número de clases iguales a 3).
 
 <p align="center">
   :herb: Modelo Binario :herb:
@@ -93,17 +93,17 @@ Se realizo una interface para que el usuario pueda ...
 * OpenCV
 * Python 3
 * Google Colab
-* Gui ....
+* Gui ...
 
 # :potted_plant: Instalación :potted_plant:
-Para el entrenamiento, evaluacion y la obtencion del modelo en formato TFLite o HDF5 simplemente se puede ejecutar calquiera de los dos ([Notebooks](https://github.com/reynaldocruz/Bootcamp-SenderoVerde/tree/main/Notebooks)) o puedes descargarlos conjuntamente con el dataset y despues cambiar las direcciones de los archivos en el notebook manualmente y ejecutarlo localmente.
+Para el entrenamiento, evaluación y la obtención del modelo en formato TFLite o HDF5 simplemente se puede ejecutar cualquiera de los dos ([Notebooks](https://github.com/reynaldocruz/Bootcamp-SenderoVerde/tree/main/Notebooks)) o puedes descargarlos conjuntamente con el dataset y después cambiar las direcciones de los archivos en el notebook manualmente y ejecutarlo localmente.
 Para el prototipo funcional .....
 
 # :four_leaf_clover: Creditos :four_leaf_clover:
 :fallen_leaf: Reynaldo Esteban Cruz Villagomez :fallen_leaf: reynaldocruz102@gmail.com
 
-:leaves: Mario Torrez :leaves: mario@gmail.com
+:leaves: Mario Martin Torrez Callisaya :leaves: mariomartintc@hotmail.com
 
-:cactus: Jorge  :cactus: mario@gmail.com
+:cactus: Jorge Armando Quiroz Pérez :cactus: jorge.armando.quiroz.perez@gmail.com
 
-:potted_plant: Grisel Quispe :potted_plant: mario@gmail.com
+:potted_plant: Grisel Quispe :potted_plant: grisel_eliana@hotmail.com 
