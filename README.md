@@ -45,12 +45,20 @@ Diff loss:
 </p>
 
 # :herb: Evaluación :herb:
-Como anteriormente se mensionaba se analizo el modelo con la metrica de evaluacion de IoU obteniendose un 85.23% de presicion.
+Como anteriormente se mensionaba se analizo el modelo con la metrica de evaluacion de meanIoU obteniendose un 85.23% de presicion con el modelo binario (numero de clases igual a 2) y 88.09% con el multiclase(numero de clases igual a 3).
 
 <p align="center">
-  <img src="Bootcamp_img/acurracy.jpg" width=300 height=250>
-  <img src="Bootcamp_img/loss.jpg" width=300 height=250>
-  <img src="Bootcamp_img/iou.jpg" width=300 height=250>
+  # :herb: Modelo Binario :herb:
+  <img src="Bootcamp_img/descarga.png" width=350 height=100>
+  <img src="Bootcamp_img/t2.png" width=350 height=100>
+  <img src="Bootcamp_img/t3.png" width=350 height=100>
+</p>
+
+<p align="center">
+  # :herb: Modelo Multiclase :herb:
+  <img src="Bootcamp_img/rgb1.png" width=350 height=100>
+  <img src="Bootcamp_img/rgb2.png" width=350 height=100>
+  <img src="Bootcamp_img/rgb3.png" width=350 height=100>
 </p>
 
 # :maple_leaf: Implementacion :maple_leaf:
