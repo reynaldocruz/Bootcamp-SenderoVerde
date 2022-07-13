@@ -85,14 +85,26 @@ Como anteriormente es mencionado, se analizó el modelo con la métrica de evalu
 </p>
 
 # :maple_leaf: Implementacion :maple_leaf:
-Se realizo una interface para que el usuario pueda ...
+Se realizó un interface para que el usuario pueda utilizar el modelo con distintos sectores de los cuales se recopiló datos, primero se selecciona el lugar, después con los variadores se selecciona el área donde se quiere hacer el análisis.
+
+<p align="center">
+  <img src="Bootcamp_img/gui_main.jpg" width=600 height=350>
+  <img src="Bootcamp_img/gui_selected.jpg" width=350 height=350>
+</p>
+
+Una vez seleccionada este hace un análisis de la imagen actual y temporales, generando la segmentación semántica de las áreas verdes y deforestadas. Además de entregar los valores porcentuales, también entrega una proyección lineal del futuro porcentaje de deforestación.
+
+<p align="center">
+  <img src="Bootcamp_img/gui_seg.jpg" width=700 height=350>
+  <img src="Bootcamp_img/gui_seg2.jpg" width=600 height=350>
+</p>
 
 # :cactus:Tecnologías/Frameworks utilizados :cactus:
 * TensorFlow
 * OpenCV
 * Python 3
 * Google Colab
-* Gui ...
+* Streamlit (GUI)
 
 # :potted_plant: Instalación :potted_plant:
 Para el entrenamiento, evaluación y la obtención del modelo en formato TFLite o HDF5 simplemente se puede ejecutar cualquiera de los dos ([Notebooks](https://github.com/reynaldocruz/Bootcamp-SenderoVerde/tree/main/Notebooks)) o puedes descargarlos conjuntamente con el dataset y después cambiar las direcciones de los archivos en el notebook manualmente y ejecutarlo localmente.
