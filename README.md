@@ -24,11 +24,11 @@ Otra problema fue la cantidad de datos que se tiene al ser muy limitada se reali
 </p>
 
 # :potted_plant: Modelo :potted_plant:
-El modelo utilizado es el ResUnet, mas informacion sobre este es encuentra en este [enlace](https://arxiv.org/pdf/1711.10684.pdf). Resumiendo, este modelo es mayormente utilizado para ...., su arquitectura esta dividida en 3 partes. La primera realiza el proceso de encoder, la segunda descomprime y la tercera ..., el la siguiente figura se puede apreciar graficamente los bloques y la arquitectura en general.
+El modelo utilizado es el ResUnet, mas informacion sobre este es encuentra en este [enlace](https://arxiv.org/pdf/1711.10684.pdf). Resumiendo, este modelo es mayormente utilizado por su alto rendimiento con una cantidad baja o moderada de parametros, su arquitectura esta dividida en 3 partes. La primera es denominada encoder, este tiene como entrada la imagen la cual pasa por diferentes bloques de codificacion(encoders), lo cual ayuda a la red a aprender las representaciones abstractas. Despues viene el bridge que consiste en una preactivacion de los bloques residuales y por ultimo el decoder o decodificador toma al bridge y las skip connections de los diferentes bloques codificados y aprende la representacion semantica, en la siguiente figura se puede apreciar graficamente los bloques y la arquitectura en general.
 
 <p align="center">
   <img src="Bootcamp_img/resunet.png" width=650 height=350>
-  <img src="Bootcamp_img/resnet_block.png" width=150 height=350>
+  <img src="Bootcamp_img/resnet_block.png" width=140 height=350>
 </p>
 
 # :leaves: Training :leaves:
